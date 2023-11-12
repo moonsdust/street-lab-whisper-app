@@ -1,7 +1,7 @@
 {
-  "name": "street-lab-whisper-app",
+  "name": "street-whisper-app",
   "version": "1.0.0",
-  "description": "STREET Lab Whisper App",
+  "description": "STREET Whisper App",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
