@@ -3,7 +3,7 @@
 Link to Python Scripts: https://github.com/carmen-chau/StreetWhisperCode 
 
 ## Structure of Folders
-- ```pages```: Contains HTML files, which will hold the main content of the app. 
+- ```pages```: Contains HTML files, which holds the main content of the app. 
 - ```src```: Within this folder are the ```css``` folder (contains CSS stylesheets for the HTML files), ```scripts``` folder (contains TypeScript (.ts) files), and ```img``` folder (contains images used in the HTML files and app)
 
 Current Structure of src folder
