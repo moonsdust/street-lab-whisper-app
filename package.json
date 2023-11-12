@@ -1,7 +1,7 @@
 {
   "name": "street-whisper-app",
   "version": "1.0.0",
-  "description": "STREET Whisper App",
+  "description": "STREET Whisper Transcription App",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
