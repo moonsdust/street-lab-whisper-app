@@ -1,4 +1,4 @@
-# STREET Lab Whisper App
+# STREET Lab Whisper Transcription App
 
 Link to Python Scripts: https://github.com/carmen-chau/StreetWhisperCode 
 
