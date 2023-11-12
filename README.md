@@ -20,9 +20,8 @@ Current Structure of src folder
 # How To Run App
 Please note that the following command has only been tested on MacOS:
 
-## Downloading Node.js and NPM
 1. Open your terminal 
-2. To install Node.js, there are multiple ways to install it, take a look at the following website: 
+2. In order to run the app from the code, you will need to install Node.js. To install Node.js, there are multiple ways to install it, take a look at the following website: 
     - https://nodejs.org/en/download/package-manager 
 3. If you decide to install Node.js through the command line, keep in mind that some of the commands listed on the Node.js website above might require you install other Package Managers before using the command (Ex: You will need to install Homebrew before you can use the command: ```brew install node```). 
 4. Make sure you installed the latest version of Node.js, you can check your version with the following command: ```node -v```
