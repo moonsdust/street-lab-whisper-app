@@ -1,0 +1,103 @@
+/* Importing Inter font */
+@font-face {
+    font-family: Inter-Regular;
+    src: url("../fonts/Inter/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: Inter-Medium;
+    src: url("../fonts/Inter/Inter-Medium.ttf");
+}
+
+@font-face {
+    font-family: Inter-SemiBold;
+    src: url("../fonts/Inter/Inter-SemiBold.ttf");
+}
+
+/* NOTES: 
+1. Font size units are in em. 
+2. Using px mainly for gap, padding, margins, and border radius instead of relative units in order to 
+ensure layout doesn't "break" or "spill" over to other sections if user resizes the app 
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter-Regular', 'Helvetica Neue', 'Archivo', 'Roboto', Arial, sans-serif;
+    font-size: 1em;
+    background-color: #C4D1EB;
+    color: #1E1E1E;
+}
+
+/* Text styling */
+h2 {
+    font-size: 1.3em;
+}
+.upload-button {
+    font-size: 1.2em;
+}
+h5, .h5-bold, .to_english_selection {
+    font-size: 0.85em;
+}
+.h5-bold, .upload-button {
+    font-family: 'Inter-SemiBold', 'Helvetica Neue', 'Archivo', 'Roboto', Arial, sans-serif;
+}
+
+
+/* Main form styling */
+.main {
+    /* To create grid layout */
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 20px; 
+}
+
+/* Settings section styling */
+.settings-section {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 0 30px 30px 30px;
+}
+
+/* Output section styling */
+.output-section {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin: 10px;
+    width: 60vmax;
+}
+
+.output-section .result h2 {
+    font-family: 'Inter-Medium', 'Helvetica Neue', 'Archivo', 'Roboto', Arial, sans-serif;
+}
+
+input[type="file"] { /* Hides the default style for file inputs */ 
+    display: none;
+}
+
+.audio-upload-subsection {
+    padding: 10px;
+    background-color: #D9D9D9;
+    border-radius: 5px 5px 0 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.upload-button {
+    color: #FFFFFF;
+    background-color: #2C5AB5;
+    border-radius: 5px;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.result {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+

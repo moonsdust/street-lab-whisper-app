@@ -16,12 +16,61 @@
     <link rel="stylesheet" href="../src/css/style.css">
   </head>
 
-  <!-- Content of the main page -->
+  <!-- Background and content of the main page-->
   <body>
-    <h1>STREET Whisper Transcription App</h1>
-    We are using Node.js <span id="node-version"></span>, Chromium
-    <span id="chrome-version"></span>, and Electron
-    <span id="electron-version"></span>.
+    <form class="main">
+      <!-- Section for Setting -->
+      <div class="settings-section">
+        <h2>Transcription Setting</h2>
+          <label for="model-size" class="h5-bold">Model Size<br></label>
+          <select class="model-size">
+            <option label="Medium">Medium</option>
+            <option label="Small">Small</option>
+            <option label="Large">Large</option>
+          </select>
+          <br>
+          <br>
+          <label for="language" class="h5-bold">Language of Selected File<br></label>
+          <select class="language">
+            <option label="English">English</option>
+            <option label="Autodetect">Autodetect</option>
+          </select>
+          <br>
+          <br>
+          <label for="speakers-num" class="h5-bold">Number of Speakers<br></label>
+          <select class="speakers-num">
+            <option label="1">1</option>
+            <option label="2">2</option>
+            <option label="3">3</option>
+          </select>
+          <br>
+          <br>
+          <label class="to_english_selection">
+            Translate to English 
+            <input type="checkbox" checked="checked">
+          </label>
+      </div>
+
+      <!-- Section for Output -->
+      <div class="output-section">
+        <form id="upload-form" method="post" enctype="multipart/form-data">
+
+          <div class = "audio-upload-subsection">
+            <label class="upload-button">
+              <input type="file" id="audioInput"/>
+              Upload Audio File
+            </label>
+          </div>
+
+          <div class="result">
+            <h2>Selected File</h2>
+            <div class="uploaded-files" id="audioFileDisplay"></div>
+          </div>
+
+        </form>
+      </div>
+    </form>
+
     <!-- You can also require other files to run in this process -->
     <script src="../dist/renderer.js"></script>
   </body>
