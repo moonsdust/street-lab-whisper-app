@@ -62,6 +62,10 @@ h5, .h5-bold, .to_english_selection {
     padding: 0 30px 30px 30px;
 }
 
+.checkbox {
+    cursor: pointer;
+}
+
 /* Output section styling */
 .output-section {
     background-color: #FFFFFF;
@@ -87,6 +91,7 @@ input[type="file"] { /* Hides the default style for file inputs */
 }
 
 .upload-button {
+    cursor: pointer;
     color: #FFFFFF;
     background-color: #2C5AB5;
     border-radius: 5px;
