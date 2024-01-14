@@ -53,19 +53,24 @@
 
       <!-- Section for Output -->
       <div class="output-section">
-        <form id="upload-form" method="post" enctype="multipart/form-data">
+        <form id="upload-form">
 
-          <div class = "audio-upload-subsection">
-            <!--Button-->
-            <label class="upload-button">
-              <input type="file" id="audioInput"/>
-              Upload Audio File
-            </label>
+          <div class="audio-upload-subsection">
+            <!--Choosing audio files buttons-->
+            <input type="file" id="choose-file" name="choose-file">
+            <button class="upload-button" onclick="displayUploadedFile()">Upload Audio File</button>
           </div>
 
-          <div class="result">
+          <div class="selected-file">
             <h2>Selected File</h2>
             <div class="uploaded-files" id="audioFileDisplay"></div>
+            <!--Run Button-->
+            <button class="run-button">Run Transcription</button>
+          </div>
+          
+          <div class="result">
+            <h2>Log Output</h2>
+            <div class="log-output" id "log-output"></div>
           </div>
 
         </form>
@@ -73,7 +78,8 @@
     </form>
 
     <!-- You can also require other files to run in this process -->
-    <script src="../dist/renderer.js"></script>
+    <script src="../src/scripts/custom.js"></script>
+    <!-- <script src="../dist/renderer.js"></script> -->
   </body>
 
 </html>
