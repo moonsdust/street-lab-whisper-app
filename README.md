@@ -12,6 +12,7 @@ Current Structure of src folder
 │   └── style.css
 ├── img
 └── scripts
+    ├── custom.js
     ├── main.ts
     ├── preload.ts
     └── renderer.ts
