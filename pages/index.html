@@ -2,53 +2,43 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STREET Whisper Transcription App</title>
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
     <!--style.css-->
     <link rel="stylesheet" href="../src/css/style.css">
   </head>
 
   <!-- Background and content of the main page-->
   <body>
-    <form class="main">
+    <main>
       <!-- Section for Setting -->
       <div class="settings-section">
-        <h2>Transcription Setting</h2>
+        <h2>User’s Preferences</h2>
+          <!--Is Input File in English?-->
+          <label class="to_english_selection">
+            Is Input File in English?
+            <input type="checkbox" class="checkbox">
+          </label>
+          <br>
+          <br>
+          <!--Process selection-->
+          <label for="process" class="h5-bold">What process should be done?<br></label>
+          <select class="process">
+            <option value="transcription">Transcription Only</option>
+            <option value="transcription-translation" id="no-eng">Transcription + Translation</option>
+          </select>
+          <br>
+          <br>
+          <!--Model size selection-->
           <label for="model-size" class="h5-bold">Model Size<br></label>
           <select class="model-size">
-            <option label="Medium">Medium</option>
-            <option label="Small">Small</option>
-            <option label="Large">Large</option>
+            <option value="large-v2">Large-V2</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
           </select>
-          <br>
-          <br>
-          <label for="language" class="h5-bold">Language of Selected File<br></label>
-          <select class="language">
-            <option label="English">English</option>
-            <option label="Autodetect">Autodetect</option>
-          </select>
-          <br>
-          <br>
-          <label for="speakers-num" class="h5-bold">Number of Speakers<br></label>
-          <select class="speakers-num">
-            <option label="1">1</option>
-            <option label="2">2</option>
-            <option label="3">3</option>
-          </select>
-          <br>
-          <br>
-          <label class="to_english_selection">
-            Translate to English 
-            <input type="checkbox" checked="checked" class="checkbox">
-          </label>
       </div>
 
       <!-- Section for Output -->
@@ -62,24 +52,23 @@
           </div>
 
           <div class="selected-file">
-            <h2>Selected File</h2>
+            <h2>Current File Name</h2>
             <div class="uploaded-files" id="audioFileDisplay"></div>
             <!--Run Button-->
-            <button class="run-button">Run Transcription</button>
+            <button class="run-button">Run Process</button>
           </div>
           
           <div class="result">
-            <h2>Log Output</h2>
-            <div class="log-output" id "log-output"></div>
+            <h2>Preview of Output File</h2>
+            <div class="output-preview" id "output-preview"></div>
           </div>
 
         </form>
       </div>
-    </form>
+    </main>
 
     <!-- You can also require other files to run in this process -->
-    <script src="../src/scripts/custom.js"></script>
-    <!-- <script src="../dist/renderer.js"></script> -->
+    <script src="../src/scripts/renderer.js"></script>
   </body>
 
 </html>
