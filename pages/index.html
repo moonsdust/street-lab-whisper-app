@@ -22,16 +22,12 @@
             Is Input File in English?
             <input type="checkbox" class="checkbox">
           </label>
-          <br>
-          <br>
           <!--Process selection-->
           <label for="process" class="h5-bold">What process should be done?<br></label>
           <select class="process">
             <option value="transcription">Transcription Only</option>
             <option value="transcription-translation" id="no-eng">Transcription + Translation</option>
           </select>
-          <br>
-          <br>
           <!--Model size selection-->
           <label for="model-size" class="h5-bold">Model Size<br></label>
           <select class="model-size">
@@ -39,6 +35,14 @@
             <option value="small">Small</option>
             <option value="medium">Medium</option>
           </select>
+          <!--Destination Folder-->
+          <label for="model-size" class="h5-bold">Destination Folder<br></label>
+          <input type="file" id="destFolder" webkitdirectory directory multiple/>
+          <!--Selected files-->
+          <div class = "selected-files">
+            <h5 class ="h5-bold">Selected Files</h5>
+            <div class="uploaded-files" id="filesDisplay"></div>
+          </div>
       </div>
 
       <!-- Section for Output -->
@@ -48,12 +52,12 @@
           <div class="audio-upload-subsection">
             <!--Choosing audio files buttons-->
             <input type="file" id="choose-file" name="choose-file">
-            <button class="upload-button" onclick="displayUploadedFile()">Upload Audio File</button>
+            <button class="upload-button">Upload Audio File</button>
           </div>
 
-          <div class="selected-file">
+          <div class="current-file">
             <h2>Current File Name</h2>
-            <div class="uploaded-files" id="audioFileDisplay"></div>
+            <div class="current-file-name" id="audioFileDisplay"></div>
             <!--Run Button-->
             <button class="run-button">Run Process</button>
           </div>
