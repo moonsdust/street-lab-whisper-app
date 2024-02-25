@@ -2,28 +2,77 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STREET Whisper Transcription App</title>
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
     <!--style.css-->
     <link rel="stylesheet" href="../src/css/style.css">
   </head>
 
-  <!-- Content of the main page -->
+  <!-- Background and content of the main page-->
   <body>
-    <h1>STREET Whisper Transcription App</h1>
-    We are using Node.js <span id="node-version"></span>, Chromium
-    <span id="chrome-version"></span>, and Electron
-    <span id="electron-version"></span>.
+    <main>
+      <!-- Section for Setting -->
+      <div class="settings-section">
+        <h2>User’s Preferences</h2>
+          <!--Is Input File in English?-->
+          <label class="to_english_selection">
+            Is Input File in English?
+            <input type="checkbox" class="checkbox">
+          </label>
+          <!--Process selection-->
+          <label for="process" class="h5-bold">What process should be done?<br></label>
+          <select class="process">
+            <option value="transcription">Transcription Only</option>
+            <option value="transcription-translation" id="no-eng">Transcription + Translation</option>
+          </select>
+          <!--Model size selection-->
+          <label for="model-size" class="h5-bold">Model Size<br></label>
+          <select class="model-size">
+            <option value="large-v2">Large-V2</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+          </select>
+          <!--Destination Folder-->
+          <label for="model-size" class="h5-bold">Destination Folder<br></label>
+          <input type="file" id="destFolder" webkitdirectory directory multiple/>
+          <!--Selected files-->
+          <!--<div class = "selected-files">
+            <h5 class ="h5-bold">Selected Files</h5>
+            <div class="uploaded-files" id="filesDisplay"></div>
+          </div> -->
+      </div>
+
+      <!-- Section for Output -->
+      <div class="output-section">
+        <form id="upload-form">
+
+          <div class="audio-upload-subsection">
+            <!--Choosing audio files buttons-->
+            <input type="file" id="choose-file" name="choose-file">
+            <button class="upload-button">Upload Audio File</button>
+          </div>
+
+          <div class="current-file">
+            <h2>Current File Name</h2>
+            <div class="current-file-name" id="audioFileDisplay"></div>
+            <!--Run Button-->
+            <button class="run-button">Run Process</button>
+          </div>
+          
+          <div class="result">
+            <h2>Preview of Output File</h2>
+            <div class="output-preview" id "output-preview"></div>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
     <!-- You can also require other files to run in this process -->
-    <script src="../dist/renderer.js"></script>
+    <script src="../src/scripts/renderer.js"></script>
   </body>
 
 </html>

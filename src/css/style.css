@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Importing Inter font */
+@font-face {
+    font-family: Inter-Regular;
+    src: url("../fonts/Inter/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: Inter-Medium;
+    src: url("../fonts/Inter/Inter-Medium.ttf");
+}
+
+@font-face {
+    font-family: Inter-SemiBold;
+    src: url("../fonts/Inter/Inter-SemiBold.ttf");
+}
+
+/* NOTES: 
+1. Font size units are in em. 
+2. Using px mainly for gap, padding, margins, and border radius instead of relative units in order to 
+ensure layout doesn't "break" or "spill" over to other sections if user resizes the app 
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter-Regular', 'Helvetica Neue', 'Archivo', 'Roboto', Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #C4D1EB;
+    color: #1E1E1E;
+}
+
+main {
+    /* To create grid layout */
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 20px; 
+}
+
+/* Text styling */
+h2 {
+    font-size: 1.3rem;
+    font-family: 'Inter-Medium', 'Helvetica Neue', 'Archivo', 'Roboto', Arial, sans-serif;
+}
+button, #choose-file::file-selector-button {
+    font-size: 1.2rem;
+}
+h5, .h5-bold, .to_english_selection {
+    font-size: 0.8rem;
+}
+.h5-bold, button, #choose-file::file-selector-button {
+    font-family: 'Inter-SemiBold', 'Helvetica Neue', 'Archivo', 'Roboto', Arial, sans-serif;
+}
+
+
+/* Button Styling */
+button, #choose-file, #choose-file::file-selector-button{
+    padding: 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    margin: 0.4%;
+}
+
+button, #choose-file::file-selector-button{
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    background-color: #2C5AB5;
+}
+
+#choose-file::file-selector-button {
+    margin: 2%;
+    color: #FFFFFF;
+}
+
+.run-button {
+    margin-top: 10px;
+}
+
+/* Settings section styling */
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 0 30px 30px 30px;
+}
+
+.checkbox {
+    cursor: pointer;
+}
+
+#filesDisplay {
+    width: auto;
+    border: 1px solid #1E1E1E;
+    padding: 4rem;
+}
+
+/* Output section styling */
+.current-file, .output-section{
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.output-section {
+    background-color: #FFFFFF;
+    width: 60vmax;
+}
+
+.audio-upload-subsection {
+    padding: 10px;
+    background-color: #D9D9D9;
+    border-radius: 5px 5px 0 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#choose-file {
+    background-color: #bfbfbf;
+}
+
+.result {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#audioFileDisplay {
+    width: auto;
+    border: 1px solid #1E1E1E;
+    padding: 1rem;
+}
+
+.output-preview {
+    width: auto;
+    border: 1px solid #1E1E1E;
+    padding: 5rem;
+}
+
+
+/* For different screen sizes */
+/* If current / max width is 400px */
+@media screen and (max-width: 400px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+} 
