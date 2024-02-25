@@ -6,14 +6,15 @@
 // needed in the renderer process.
 checkbox = document.querySelector('.checkbox');
 
-checkbox.addEventListener('change', function engorNot(){   
-    if(checkbox.checked) {
-        // Don't display "Transcription + Translation" if input file is in English
-        document.querySelector('.process #no-eng').style.display = "none";
+checkbox.addEventListener('change', 
+    function engorNot(){   
+        if(checkbox.checked) {
+            // Don't display "Transcription + Translation" if input file is in English
+            document.querySelector('.process #no-eng').style.display = "none";
+        }
+        else {
+            // Display "Transcription + Translation" if input file is not English 
+            document.querySelector('.process #no-eng').style.display = "block";
+        }
     }
-    else {
-        // Display "Transcription + Translation" if input file is not English 
-        document.querySelector('.process #no-eng').style.display = "block";
-    }
-}
 );
